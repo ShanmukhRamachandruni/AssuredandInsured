@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const clientSchema = new mongoose.Schema({
-name:{
+Name:{
     type: String,
     trim : true,
 },
@@ -8,27 +8,23 @@ email:{
     type:String,
     unique:true,
 },
-dob:{
+DOB:{
     type:String,
 },
-phone:{type:Number},
-city:{type:String},
-familyStatus:{type:String},
-diseases:{type:String},
-insuranceType:{type:String},
-smoking:{type:String},
-loanType:{type:String},
+Phone:{type:String},
+City:{type:String},
 option:{type:String},
+FamilyStatus:{type:String},
+Diseases:{type:String},
+Insurance_Type:{type:String},
+Smoking:{type:String},
+Loan_Type:{type:String},
+
 value:{type:Number},
 photo: {
-    buffer: {
-        type: Buffer,
-    },
-    contentType: {
-        type: String,
-    },
-
-}
+    data: Buffer,
+    contentType: String,
+  }
 
 
 

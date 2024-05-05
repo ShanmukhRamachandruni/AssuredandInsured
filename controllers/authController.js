@@ -11,7 +11,7 @@ try {
     const client = new clientModel(req.fields);
     if (photo) {
         client.photo.contentType = photo.type;
-        client.photo.buffer = fs.readFileSync(photo.path);
+        client.photo.data = fs.readFileSync(photo.path);
     }
     
     await client.save();
